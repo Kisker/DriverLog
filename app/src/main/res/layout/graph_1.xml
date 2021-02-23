@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <include
+        layout="@layout/titlebar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_dlg_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="112dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_prestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_graph1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_graph1_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/graph1_guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_dlg_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_dlg_top"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06940063" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_header1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text_window_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_header"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/newDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heebo"
+                android:gravity="center"
+                android:letterSpacing="0"
+                android:text="12.20.2021"
+                android:textAlignment="center"
+                android:textColor="#707070"
+                android:textFontWeight="200"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="22dp"
+                android:layout_height="19dp"
+                android:src="@drawable/my_warning"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/newDate"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="22dp"
+                android:layout_height="19dp"
+                android:src="@drawable/my_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="22dp"
+                android:layout_height="19dp"
+                android:src="@drawable/my_left"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/newDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline_header1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_window_layout">
+
+            <Button
+                android:id="@+id/infoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:checked="false"
+                android:fontFamily="@font/heebo"
+                android:gravity="center"
+                android:letterSpacing="0"
+                android:text="Info"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toStartOf="@+id/graphButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/graphButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#032A57"
+                android:checked="true"
+                android:fontFamily="@font/heebo"
+                android:gravity="center"
+                android:letterSpacing="0"
+                android:text="Graph"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toStartOf="@+id/detailsButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/infoButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/detailsButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:checked="false"
+                android:fontFamily="@font/heebo"
+                android:gravity="center"
+                android:letterSpacing="0"
+                android:text="Details"
+                android:textAllCaps="false"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/graphButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_header1">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="65dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="128dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.75" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/textViewBoxGraph"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#EFF2F7"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline_title">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/number_window_layout"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewBoxGraph"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/number_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="00:00"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="1"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_0"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="2"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="3"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="4"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="5"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_6"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="6"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_7"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="7"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_8"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="8"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_9"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="9"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_10"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="10"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_11"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="11"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_12"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_10"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="noon"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_1a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_11"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_1a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="1"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_2a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_2a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="2"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_3a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_1a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_3a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="3"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_4a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_2a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_4a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="4"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_5a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_3a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_5a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="5"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_6a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_4a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_6a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="6"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_7a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_5a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_7a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="7"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_8a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_6a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_8a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="8"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_9a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_7a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_9a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="9"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_10a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_8a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_10a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="10"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/number_11a"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_9a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_11a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:textAlignment="center"
+                    android:letterSpacing="0"
+                    android:text="11"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_10a"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/number_window_layout_btn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline_btn">
+
+                <TextView
+                    android:id="@+id/number_0b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="00:00"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_1b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/number_1b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_2b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_0b" />
+
+                <TextView
+                    android:id="@+id/number_2b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_3b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_1b" />
+
+                <TextView
+                    android:id="@+id/number_3b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_4b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_2b" />
+
+                <TextView
+                    android:id="@+id/number_4b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_5b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_3b" />
+
+                <TextView
+                    android:id="@+id/number_5b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_6b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_4b" />
+
+                <TextView
+                    android:id="@+id/number_6b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_7b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_5b" />
+
+                <TextView
+                    android:id="@+id/number_7b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="7"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_8b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_6b" />
+
+                <TextView
+                    android:id="@+id/number_8b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="8"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_9b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_7b" />
+
+                <TextView
+                    android:id="@+id/number_9b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="9"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_10b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_8b" />
+
+                <TextView
+                    android:id="@+id/number_10b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_11b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_9b" />
+
+                <TextView
+                    android:id="@+id/number_11b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="11"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_12b"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_10b" />
+
+                <TextView
+                    android:id="@+id/number_12b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="noon"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_1c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_11b" />
+
+                <TextView
+                    android:id="@+id/number_1c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_2c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_12b" />
+
+                <TextView
+                    android:id="@+id/number_2c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_3c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_1c" />
+
+                <TextView
+                    android:id="@+id/number_3c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_4c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_2c" />
+
+                <TextView
+                    android:id="@+id/number_4c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_5c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_3c" />
+
+                <TextView
+                    android:id="@+id/number_5c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_6c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_4c" />
+
+                <TextView
+                    android:id="@+id/number_6c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_7c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_5c" />
+
+                <TextView
+                    android:id="@+id/number_7c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="7"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_8c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_6c" />
+
+                <TextView
+                    android:id="@+id/number_8c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="8"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_9c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_7c" />
+
+                <TextView
+                    android:id="@+id/number_9c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="9"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_10c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_8c" />
+
+                <TextView
+                    android:id="@+id/number_10c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/number_11c"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_9c" />
+
+                <TextView
+                    android:id="@+id/number_11c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/heebo"
+                    android:letterSpacing="0"
+                    android:text="11"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/number_10c" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/window_layout_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/number_window_layout_btn">
+
+                <TextView
+                    android:id="@+id/offDuty_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Off Duty"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/offDuty_line1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hour1_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:text="10:00"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="25sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/offDuty_line1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/offDuty_btn"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/offDuty_line1"
+                    style="@style/Divider.Vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sleeper_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/offDuty_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/sleeper_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sleeper Berth"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/slepper_line2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/offDuty_line1"
+                    app:layout_constraintTop_toTopOf="@+id/offDuty_btn" />
+
+                <TextView
+                    android:id="@+id/hour2_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="04:00"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="25sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/slepper_line2"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/sleeper_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/sleeper_btn"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/slepper_line2"
+                    style="@style/Divider.Vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/driving_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/sleeper_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/driving_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Driving"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/driving_line3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/slepper_line2"
+                    app:layout_constraintTop_toTopOf="@+id/sleeper_btn" />
+
+                <TextView
+                    android:id="@+id/hour3_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="08:30"
+                    android:textAlignment="center"
+                    android:textColor="#EF5F5B"
+                    android:textSize="25sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/driving_line3"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/driving_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/driving_btn" />
+
+                <TextView
+                    android:id="@+id/driving_line3"
+                    style="@style/Divider.Vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/onDuty_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/driving_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/onDuty_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="On Duty (not driving)"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/onDuty_line4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/driving_line3"
+                    app:layout_constraintTop_toTopOf="@+id/sleeper_btn" />
+
+                <TextView
+                    android:id="@+id/hour4_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="01:30"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="25sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/onDuty_line4"
+                    app:layout_constraintStart_toStartOf="@+id/onDuty_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/onDuty_btn" />
+
+                <TextView
+                    android:id="@+id/onDuty_line4"
+                    style="@style/Divider.Vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/totalHours_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/onDuty_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/totalHours_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Total hours"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/onDuty_line4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hour5_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="24:00"
+                    android:textAlignment="center"
+                    android:textColor="#707070"
+                    android:textSize="25sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/totalHours_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/totalHours_btn"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textGraph1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_dlg_graph1_btn"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_prestart"
+        app:layout_constraintTop_toTopOf="@+id/guideline_dlg_graph1"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+            android:id="@+id/offDuty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Off Duty"
+            android:textColor="#707070"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/sleeper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ring1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <TextView
+            android:id="@+id/ring1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/ring1"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/offDuty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/offDuty" />
+
+        <TextView
+            android:id="@+id/sleeper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Sleeper Berth"
+            android:textColor="#707070"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/driving"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ring2"
+            app:layout_constraintTop_toBottomOf="@+id/offDuty" />
+
+        <TextView
+            android:id="@+id/ring2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/ring2"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/sleeper"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sleeper" />
+
+        <TextView
+            android:id="@+id/driving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Driving"
+            android:textColor="#707070"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/notDriving"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ring3"
+            app:layout_constraintTop_toBottomOf="@+id/sleeper" />
+
+        <TextView
+            android:id="@+id/ring3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/ring3"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/driving"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/driving" />
+
+        <TextView
+            android:id="@+id/notDriving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="On Duty         (not driving)"
+            android:textColor="#707070"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ring4"
+            app:layout_constraintTop_toBottomOf="@+id/driving" />
+
+        <TextView
+            android:id="@+id/ring4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/ring4"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/notDriving"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/notDriving" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

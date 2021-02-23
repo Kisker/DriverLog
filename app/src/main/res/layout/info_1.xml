@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/titlebar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_dlg_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_btn_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/text_window_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_btn_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_btn_start"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <TextView
+            android:id="@+id/newDate_info1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="12.20.2021"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_info1"
+            android:layout_width="22dp"
+            android:layout_height="19dp"
+            android:src="@drawable/my_warning"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/newDate_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4_info1"
+            android:layout_width="22dp"
+            android:layout_height="19dp"
+            android:src="@drawable/my_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2_info1"
+            android:layout_width="22dp"
+            android:layout_height="19dp"
+            android:src="@drawable/my_left"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/newDate_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_btn_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_btn_start"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <Button
+            android:id="@+id/infoButton_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#032A57"
+            android:checked="true"
+            android:fontFamily="@font/heebo"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="Info"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="normal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/graphButton_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/graphButton_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:checked="false"
+            android:fontFamily="@font/heebo"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="Graph"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textStyle="normal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/detailsButton_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/infoButton_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/detailsButton_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:checked="false"
+            android:fontFamily="@font/heebo"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="Details"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textStyle="normal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/graphButton_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_header1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <TextView
+            android:id="@+id/driverID_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Driver"
+            android:textAlignment="center"
+            android:textColor="#032A57"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameID_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Richard Smith"
+            android:textColor="#032A57"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/carierID_info1"
+            app:layout_constraintStart_toStartOf="@+id/driverID_info1"
+            app:layout_constraintTop_toBottomOf="@+id/driverID_info1" />
+
+        <TextView
+            android:id="@+id/carierName_info1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/heebo"
+            android:gravity="center_vertical"
+            android:letterSpacing="0"
+            android:text="Carier"
+            android:textColor="#032A57"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/officeName_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/driverID_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/carierID_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Armada trucking Group inc"
+            android:textColor="#032A57"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/officeID_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nameID_info1"
+            app:layout_constraintStart_toStartOf="@+id/carierName_info1"
+            app:layout_constraintTop_toBottomOf="@+id/carierName_info1" />
+
+        <TextView
+            android:id="@+id/officeName_info1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/heebo"
+            android:gravity="center_vertical"
+            android:letterSpacing="0"
+            android:text="Main office"
+            android:textColor="#032A57"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/locationName_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/carierName_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/officeID_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="1517 E Grand Ave Pomona, CA, 91766"
+            android:textAlignment="viewStart"
+            android:textColor="#032A57"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/locationID_info1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/carierID_info1"
+            app:layout_constraintStart_toStartOf="@+id/officeName_info1"
+            app:layout_constraintTop_toBottomOf="@+id/officeName_info1" />
+
+        <TextView
+            android:id="@+id/locationName_info1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Depot location"
+            android:textColor="#032A57"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/officeName_info1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/locationID_info1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="200 Old Ranch Road, City of industry, CA, 91789"
+            android:textAlignment="viewStart"
+            android:textColor="#032A57"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/officeID_info1"
+            app:layout_constraintStart_toStartOf="@+id/locationName_info1"
+            app:layout_constraintTop_toBottomOf="@+id/locationName_info1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textViewBox_info1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#EFF2F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_title">
+
+            <TextView
+                android:id="@+id/recordDate_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                android:text="Record date"
+                android:textAlignment="viewStart"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@+id/recordDateID_info1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recordDateID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="07.02.2021"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/recordDate_info1"
+                app:layout_constraintTop_toBottomOf="@+id/recordDate_info1" />
+
+            <TextView
+                android:id="@+id/currentLocation_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Current location"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.305"
+                app:layout_constraintStart_toEndOf="@+id/recordDate_info1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentLocationID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="6 mi. NE North auburn, CA"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/currentLocation_info1"
+                app:layout_constraintTop_toBottomOf="@+id/currentLocation_info1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textViewBox1_info1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBox_info1">
+
+            <TextView
+                android:id="@+id/truck_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Truck ID"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/truckID_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12345678"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/truck_info1"
+                app:layout_constraintTop_toBottomOf="@+id/truck_info1" />
+
+            <TextView
+                android:id="@+id/line1_info1"
+                style="@style/Divider.Vertical"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_below="@id/textViewBox1_info1"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="28dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/truckID_info1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/truckID1_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="12345678"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/line1_info1"
+                app:layout_constraintTop_toBottomOf="@+id/truck_info1" />
+
+            <TextView
+                android:id="@+id/driverCo_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:text="CO-driver name"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/shipping_info1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/truckVIN_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="52dp"
+                android:text="Truck VIN"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shipping_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:text="Shipping ID"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/driverCo_info1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/truckVIN_info1"
+                app:layout_constraintStart_toStartOf="@+id/trailerID_info1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/truckVinID_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="321654"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/truckVIN_info1"
+                app:layout_constraintTop_toBottomOf="@+id/truckVIN_info1" />
+
+            <TextView
+                android:id="@+id/line2_info1"
+                style="@style/Divider.Vertical"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="3dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/truckVinID_info1"
+                app:layout_constraintTop_toTopOf="@+id/truckVinID_info1" />
+
+            <TextView
+                android:id="@+id/truckVinID1_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="258369"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/line2_info1"
+                app:layout_constraintTop_toBottomOf="@+id/truckVIN_info1" />
+
+            <TextView
+                android:id="@+id/trailer_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Trailer ID"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.31"
+                app:layout_constraintStart_toEndOf="@+id/truck_info1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/trailerID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="12345678"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/trailer_info1"
+                app:layout_constraintTop_toBottomOf="@+id/trailer_info1" />
+
+            <TextView
+                android:id="@+id/line3_info1"
+                style="@style/Divider.Vertical"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="3dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/trailerID_info1"
+                app:layout_constraintTop_toTopOf="@+id/trailerID_info1" />
+
+            <TextView
+                android:id="@+id/trailerID1_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="12345678"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/line3_info1"
+                app:layout_constraintTop_toBottomOf="@+id/trailer_info1" />
+
+            <TextView
+                android:id="@+id/shippingID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="BL1234567890"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/driverCoID_info1"
+                app:layout_constraintStart_toStartOf="@+id/shipping_info1"
+                app:layout_constraintTop_toBottomOf="@+id/shipping_info1" />
+
+            <TextView
+                android:id="@+id/driverCoID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/driverCo_info1"
+                app:layout_constraintTop_toBottomOf="@+id/driverCo_info1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textViewBox2_info1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#EFF2F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBox1_info1">
+
+            <TextView
+                android:id="@+id/drivingRecords_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                android:text="Unidentified driving records"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@+id/drivingRecordsID_info1"
+                app:layout_constraintEnd_toStartOf="@+id/indicatorsELD_info1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/drivingRecordsID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="4dp"
+                android:text="No"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/indicatorsEldID_info1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drivingRecords_info1" />
+
+            <TextView
+                android:id="@+id/indicatorsELD_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ELD malfunction indicators"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/indicatorsData_info1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/drivingRecords_info1"
+                app:layout_constraintTop_toTopOf="@+id/textViewBox2_info2" />
+
+            <TextView
+                android:id="@+id/indicatorsEldID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="No"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/indicatorsDataID_info1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/drivingRecordsID_info1"
+                app:layout_constraintStart_toStartOf="@+id/indicatorsELD_info1"
+                app:layout_constraintTop_toBottomOf="@+id/indicatorsELD_info1" />
+
+            <TextView
+                android:id="@+id/indicatorsData_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Data diagnostic indicators"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/indicatorsELD_info1"
+                app:layout_constraintTop_toTopOf="@+id/textViewBox2_info1" />
+
+            <TextView
+                android:id="@+id/indicatorsDataID_info1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="No"
+                android:textAlignment="viewStart"
+                android:textColor="#707070"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/indicatorsEldID_info1"
+                app:layout_constraintStart_toStartOf="@+id/indicatorsData_info1"
+                app:layout_constraintTop_toBottomOf="@+id/indicatorsData_info1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

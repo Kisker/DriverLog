@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_prestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_graph1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_graph1_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/graph1_guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_dlg_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_dlg_top"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_header1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text_window_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_header"
+            tools:layout_editor_absoluteX="0dp">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/editStatus3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="Edit status"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textGraph_status3"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_header1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_window_layout">
+
+            <ImageView
+                android:id="@+id/imageBed_status3"
+                android:layout_width="43dp"
+                android:layout_height="25dp"
+                android:src="@drawable/bed_light"
+                app:layout_constraintEnd_toStartOf="@+id/imageWheel_status3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sleeper_status3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heebo"
+                android:letterSpacing="0"
+                android:text="Sleeper Berth"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/imageBed_status3"
+                app:layout_constraintStart_toStartOf="@+id/imageBed_status3"
+                app:layout_constraintTop_toBottomOf="@+id/imageBed_status3" />
+
+            <ImageView
+                android:id="@+id/imageWheel_status3"
+                android:layout_width="43dp"
+                android:layout_height="25dp"
+                android:src="@drawable/wheel_light"
+                app:layout_constraintEnd_toStartOf="@+id/imageHome_status3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageBed_status3"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/driving_status3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heebo"
+                android:letterSpacing="0"
+                android:text="Driving"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/imageWheel_status3"
+                app:layout_constraintStart_toStartOf="@+id/imageWheel_status3"
+                app:layout_constraintTop_toBottomOf="@+id/imageWheel_status3" />
+
+            <ImageView
+                android:id="@+id/imageHome_status3"
+                android:layout_width="43dp"
+                android:layout_height="25dp"
+                android:src="@drawable/home_bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageTruck_status3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageWheel_status3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="4dp" />
+
+            <TextView
+                android:id="@+id/offDuty_status3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heebo"
+                android:letterSpacing="0"
+                android:text="Off Duty"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/imageHome_status3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imageHome_status3"
+                app:layout_constraintTop_toBottomOf="@+id/imageHome_status3" />
+
+            <ImageView
+                android:id="@+id/imageTruck_status3"
+                android:layout_width="43dp"
+                android:layout_height="25dp"
+                android:src="@drawable/truck_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageHome_status3"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/onDuty_status3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heebo"
+                android:letterSpacing="0"
+                android:text="On Duty (not driving)"
+                android:textColor="#707070"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/imageTruck_status3"
+                app:layout_constraintStart_toStartOf="@+id/imageTruck_status3"
+                app:layout_constraintTop_toBottomOf="@+id/imageTruck_status3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/date_status3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Date"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textGraph_status3" />
+
+        <EditText
+            android:id="@+id/editFeedback_status3"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/heebo"
+            android:gravity="center|fill"
+            android:hint="12.11.2021"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:text=""
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/editFeedback1_status3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_status3" />
+
+        <TextView
+            android:id="@+id/time_status3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Time"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/editFeedback1_status3"
+            app:layout_constraintTop_toTopOf="@+id/date_status3" />
+
+        <EditText
+            android:id="@+id/editFeedback1_status3"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/heebo"
+            android:gravity="center|fill"
+            android:hint="12:00"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:text=""
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/editFeedback2_status3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editFeedback_status3"
+            app:layout_constraintTop_toBottomOf="@+id/time_status3" />
+
+
+        <TextView
+            android:id="@+id/location_status3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Location"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/editFeedback2_status3"
+            app:layout_constraintTop_toTopOf="@+id/time_status3" />
+
+        <EditText
+            android:id="@+id/editFeedback2_status3"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/heebo"
+            android:gravity="center|fill"
+            android:hint="49 mi NNE Fallon, NV"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:text=""
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editFeedback1_status3"
+            app:layout_constraintTop_toBottomOf="@+id/location_status3" />
+
+        <TextView
+            android:id="@+id/note_status3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Note"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editFeedback_status3" />
+
+        <EditText
+            android:id="@+id/editFeedback3_status3"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            android:background="@drawable/round_corner"
+            android:fontFamily="@font/heebo"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:hint="Write your note..."
+            android:selectAllOnFocus="true"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/note_status3" />
+
+
+        <Button
+            android:id="@+id/btnSave_status1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#032A57"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Save"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete_status1"
+            app:layout_constraintTop_toBottomOf="@+id/editFeedback3_status1" />
+
+        <Button
+            android:id="@+id/btnDelete_status1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSave_status1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editFeedback3_status1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

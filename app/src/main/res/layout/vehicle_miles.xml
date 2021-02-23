@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+
+    <TextView
+        android:id="@+id/totalMiles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="ELD did not capture total vehicle miles for the event"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_dlg_top" />
+
+    <TextView
+        android:id="@+id/totalTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Time"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/totalStatusType"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/totalDate"
+        app:layout_constraintTop_toTopOf="@+id/totalDate" />
+
+    <TextView
+        android:id="@+id/totalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Date"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/totalStatusType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/heebo"
+        android:gravity="center_vertical"
+        android:letterSpacing="0"
+        android:text="Status/Type"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/totalEventID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalTime"
+        app:layout_constraintTop_toTopOf="@+id/totalTime" />
+
+    <TextView
+        android:id="@+id/totalEventID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/heebo"
+        android:gravity="center_vertical"
+        android:letterSpacing="0"
+        android:text="Event sequence ID"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalStatusType"
+        app:layout_constraintTop_toTopOf="@+id/totalStatusType" />
+
+    <TextView
+        android:id="@+id/totalDateID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="12.01.2021"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/totalDate"
+        app:layout_constraintTop_toBottomOf="@+id/totalDate" />
+
+    <TextView
+        android:id="@+id/totalTimeID"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="14:50"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/totalTime"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toEndOf="@+id/totalDate"
+        app:layout_constraintTop_toBottomOf="@+id/totalTime" />
+
+    <TextView
+        android:id="@+id/totalDutyStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Engine power up"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/totalIdNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalTimeID"
+        app:layout_constraintStart_toStartOf="@+id/totalStatusType"
+        app:layout_constraintTop_toBottomOf="@+id/totalStatusType" />
+
+    <TextView
+        android:id="@+id/totalIdNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="123654789"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalDutyStatus"
+        app:layout_constraintStart_toStartOf="@+id/totalEventID"
+        app:layout_constraintTop_toBottomOf="@+id/totalEventID" />
+
+    <Button
+        android:id="@+id/totalBtnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#032A57"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_dlg_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalMyFeedback" />
+
+    <TextView
+        android:id="@+id/totalMissingMiles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Please add missing data in whole miles into the field below"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_middle" />
+
+    <EditText
+        android:id="@+id/totalMyFeedback"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/round_corner"
+        android:gravity="center|fill"
+        android:hint=""
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text=""
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toBottomOf="@+id/totalMissingMiles" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2118863" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

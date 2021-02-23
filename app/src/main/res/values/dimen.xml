@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSizeButton">@dimen/_20sdp</dimen>
+    <dimen name="textSizeButton1">@dimen/_30sdp</dimen>
+    <dimen name="textSizeTitle">@dimen/_25sdp</dimen>
+    <dimen name="textSizeTitle1">@dimen/_30sdp</dimen>
+    <dimen name="textSizeTextView">@dimen/_13sdp</dimen>
+    <dimen name="textSizeTextView1">@dimen/_16sdp</dimen>
+    <dimen name="textSizeTextView2">@dimen/_18sdp</dimen>
+    <dimen name="textSizeTextView3">@dimen/_20sdp</dimen>
+    <dimen name="textSizeEditText">@dimen/_16sdp</dimen>
+    <dimen name="textSizeEditText1">@dimen/_20sdp</dimen>
+</resources>

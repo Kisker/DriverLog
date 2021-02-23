@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/guidelineNote1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_dlg_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toTopOf="@id/guideline_dlg_top"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/dateHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="12.20.2021, 10:00"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="Driver"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/dateHour"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+            android:textAlignment="viewStart"
+            android:textColor="#707070"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateHour" />
+
+        <TextView
+            android:id="@+id/dateHour1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="12.20.2021, 12:00"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+        <TextView
+            android:id="@+id/motor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="Motor Carier"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/dateHour1"
+            app:layout_constraintTop_toTopOf="@+id/dateHour1" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/segoe"
+            android:gravity="start"
+            android:letterSpacing="0"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et!"
+            android:textAlignment="viewStart"
+            android:textColor="#707070"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateHour1" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Confirm"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/cancel"
+            app:layout_constraintTop_toTopOf="@+id/check" />
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:button="@null"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textStyle="normal"
+            app:drawableStartCompat="@drawable/checkbox"
+            app:layout_constraintEnd_toStartOf="@+id/confirm"
+            app:layout_constraintTop_toBottomOf="@+id/text2" />
+
+        <TextView
+            android:id="@+id/decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Decline"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cancel" />
+
+        <CheckBox
+            android:id="@+id/cancel"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:button="@null"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textStyle="normal"
+            app:drawableStartCompat="@drawable/cancel_foreground"
+            app:layout_constraintEnd_toStartOf="@+id/decline"
+            app:layout_constraintTop_toBottomOf="@+id/text2" />
+
+        <TextView
+            android:id="@+id/dateHour2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="12.20.2021, 13:20"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm" />
+
+        <TextView
+            android:id="@+id/motor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="Motor Carier"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/dateHour2"
+            app:layout_constraintTop_toTopOf="@+id/dateHour2" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/segoe"
+            android:gravity="start"
+            android:letterSpacing="0"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et!"
+            android:textAlignment="viewStart"
+            android:textColor="#707070"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateHour2" />
+
+        <TextView
+            android:id="@+id/confirm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Confirm"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/cancel1"
+            app:layout_constraintTop_toTopOf="@+id/check1" />
+
+        <CheckBox
+            android:id="@+id/check1"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:button="@null"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textStyle="normal"
+            app:drawableStartCompat="@drawable/checkbox"
+            app:layout_constraintEnd_toStartOf="@+id/confirm1"
+            app:layout_constraintTop_toBottomOf="@+id/text3" />
+
+        <TextView
+            android:id="@+id/decline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/heebo"
+            android:letterSpacing="0"
+            android:text="Decline"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cancel1" />
+
+        <CheckBox
+            android:id="@+id/cancel1"
+            android:layout_width="31dp"
+            android:layout_height="23dp"
+            android:button="@null"
+            android:textAlignment="center"
+            android:textColor="#062D59"
+            android:textStyle="normal"
+            app:drawableStartCompat="@drawable/cancel_foreground"
+            app:layout_constraintEnd_toStartOf="@+id/decline1"
+            app:layout_constraintTop_toBottomOf="@+id/text3" />
+
+        <TextView
+            android:id="@+id/dateHour3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="12.20.2021, 13:20"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textFontWeight="200"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check1" />
+
+        <TextView
+            android:id="@+id/driver1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/segoe"
+            android:letterSpacing="0"
+            android:text="Driver"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/dateHour3"
+            app:layout_constraintTop_toTopOf="@+id/dateHour3" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/segoe"
+            android:gravity="start"
+            android:letterSpacing="0"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+            android:textAlignment="viewStart"
+            android:textColor="#707070"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateHour3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2118863" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

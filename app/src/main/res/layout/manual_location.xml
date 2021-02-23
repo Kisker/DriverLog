@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mnLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Please add your location manually."
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toTopOf="@+id/guideline_dlg_top" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="35dp"
+        android:fontFamily="@font/heebo"
+        android:gravity="center_vertical"
+        android:letterSpacing="0"
+        android:text="Time"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/statusType"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toTopOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Date"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/time"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toBottomOf="@+id/mnLocation" />
+
+    <TextView
+        android:id="@+id/statusType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/heebo"
+        android:gravity="center_vertical"
+        android:letterSpacing="0"
+        android:text="Status/Type"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/eventID"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/eventID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/heebo"
+        android:gravity="center_vertical"
+        android:letterSpacing="0"
+        android:text="Event sequence ID"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/statusType"
+        app:layout_constraintTop_toTopOf="@+id/statusType" />
+
+
+    <TextView
+        android:id="@+id/dateID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="12.01.2021"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/timeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="14:50"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/dutyStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Off Duty"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/statusType"
+        app:layout_constraintTop_toBottomOf="@+id/statusType" />
+
+    <TextView
+        android:id="@+id/idNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="123654789"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/eventID"
+        app:layout_constraintTop_toBottomOf="@+id/eventID" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Distance"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/editFeedback"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start" />
+
+    <EditText
+        android:id="@+id/editFeedback"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round_corner"
+        android:gravity="center|fill"
+        android:hint=""
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text=""
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editFeedback2"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline_middle"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toBottomOf="@+id/timeID" />
+
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Place name"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/editFeedback1"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start" />
+
+    <EditText
+        android:id="@+id/editFeedback1"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round_corner"
+        android:gravity="center|fill"
+        android:hint=""
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text=""
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editFeedback3"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toBottomOf="@+id/editFeedback" />
+
+    <TextView
+        android:id="@+id/direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Direction"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/editFeedback2"
+        app:layout_constraintStart_toStartOf="@+id/editFeedback2" />
+
+    <EditText
+        android:id="@+id/editFeedback2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round_corner"
+        android:gravity="center|fill"
+        android:hint=""
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text=""
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editFeedback"
+        app:layout_constraintTop_toBottomOf="@+id/idNumber" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="State"
+        android:textAlignment="center"
+        android:textColor="#707070"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/editFeedback3"
+        app:layout_constraintStart_toStartOf="@+id/editFeedback3" />
+
+    <EditText
+        android:id="@+id/editFeedback3"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round_corner"
+        android:gravity="center|fill"
+        android:hint=""
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:text=""
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editFeedback1"
+        app:layout_constraintTop_toBottomOf="@+id/editFeedback2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#032A57"
+        android:fontFamily="@font/heebo"
+        android:letterSpacing="0"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ACB7C352"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dlg_end"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_dlg_start"
+        app:layout_constraintTop_toBottomOf="@+id/editFeedback3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/editFeedback"
+        app:layout_constraintGuide_percent="0.4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dlg_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
